@@ -34,11 +34,66 @@
 //     btn.removeEventListener('click', show)
 //})
 
-const form=document.querySelector("form")
-form.addEventListener('submit', (event)=>{
-    event.preventDefault()
-    console.log(event.srcElement[0].value)
-    console.log(event.srcElement[1].value)
-    console.log(event)
-    console.log("button clicked")
-})
+// const form=document.querySelector("form")
+// form.addEventListener('submit', (event)=>{
+//     event.preventDefault()
+//     console.log(event.srcElement[0].value)
+//     console.log(event.srcElement[1].value)
+//     console.log(event)
+//     console.log("button clicked")
+// })
+
+
+// console.log('we will right code')
+// console.log('we will write code')
+
+// console.log(a)
+// var a=3453
+// let b=456;
+
+// console.log(a)
+// console.log(b)
+
+// function print(){
+//     let c=40
+//     console.log("inside fn")
+// }
+
+// print()
+
+// let total=345;
+
+// function calculate(){
+    // console.log(total)
+//     var total=565
+// }
+
+// calculate()
+  
+// console.log("this is the beginning of the code")
+// const timeout=setTimeout(()=>{console.log("after 2 se")},2000)
+// clearTimeout(timeout)
+// console.log("this is the end of the code")
+
+// const interval=setInterval(() => {console.log("printing at every two second")}, 2000);
+
+// setTimeout(() => {clearInterval(interval)}, (1000))
+
+// let i = 1;
+// const interval = setInterval(() => {
+//     console.log(i);
+//     i++;
+//     if (i > 10) {
+//         clearInterval(interval);
+//     }
+// }, 2000); // 2 seconds
+
+let count=0;
+
+const interval=setInterval(()=>{
+    count+=1
+    console.log(count)
+    if(count===10){
+        clearInterval(interval)
+    }
+},1000)
