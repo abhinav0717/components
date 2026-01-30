@@ -88,12 +88,82 @@
 //     }
 // }, 2000); // 2 seconds
 
-let count=0;
+// let count=0;
 
-const interval=setInterval(()=>{
-    count+=1
-    console.log(count)
-    if(count===10){
-        clearInterval(interval)
-    }
-},1000)
+// const interval=setInterval(()=>{
+//     count+=1
+//     console.log(count)
+//     if(count===100){
+//         clearInterval(interval)
+//     }
+// },1000)
+
+// const studentname=document.querySelector('#name')
+// const button=document.querySelector('.btn')
+// const list=document.querySelector('.list')
+
+// button.addEventListener("click",()=>{
+//     // #creating the element
+//     const li=document.createElement("li")
+//     const deletebutton=document.createElement("button")
+//     // providing the text
+//     li.innerText=studentname.value
+//     deletebutton.innerText="delete"
+
+//     deletebutton.addEventListener('click', ()={
+//         // li.remove()
+//         list.removechild(li)
+//     }
+
+
+//     li.appendChild(deletebtn)
+//     list.appendChild(li)
+//     studentname.value=""
+// })
+
+// console.log("starting homework...");
+
+// setTimeout(() => {
+//     console.log("homework done");
+//     console.log("starting dinner");
+
+//     setTimeout(() => {
+//         console.log("dinner done !");
+//         console.log("getting ready to go out");
+
+//         setTimeout(() => {
+//             console.log("going to the playgroung!");
+//         }, 1000);  
+
+//     }, 1500);
+
+// }, 2000);
+
+
+function finishHomework(callback) {
+console.log("Starting homework...");
+setTimeout(() => {
+console.log("Homework done!"); callback();
+
+}, 2000);
+
+}
+
+function eatDinner (callback) {
+console.log("Starting dinner...");
+setTimeout(() => {
+console.log("Dinner done!");
+callback();
+
+}, 1500);
+}
+
+function goToPlayground() {
+console.log("Going to the playground!");
+}
+
+// Chained in steps, but cleaner
+
+finishHomework(() => { eatDinner(() => { goToPlayground(); });
+
+});
