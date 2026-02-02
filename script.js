@@ -140,30 +140,51 @@
 // }, 2000);
 
 
-function finishHomework(callback) {
-console.log("Starting homework...");
-setTimeout(() => {
-console.log("Homework done!"); callback();
+// function finishHomework(callback) {
+// console.log("Starting homework...");
+// setTimeout(() => {
+// console.log("Homework done!"); callback();
 
-}, 2000);
+// }, 2000);
 
-}
+// }
 
-function eatDinner (callback) {
-console.log("Starting dinner...");
-setTimeout(() => {
-console.log("Dinner done!");
-callback();
+// function eatDinner (callback) {
+// console.log("Starting dinner...");
+// setTimeout(() => {
+// console.log("Dinner done!");
+// callback();
 
-}, 1500);
-}
+// }, 1500);
+// }
 
-function goToPlayground() {
-console.log("Going to the playground!");
-}
+// function goToPlayground() {
+// console.log("Going to the playground!");
+// }
 
-// Chained in steps, but cleaner
+// // Chained in steps, but cleaner
 
-finishHomework(() => { eatDinner(() => { goToPlayground(); });
+// finishHomework(() => { eatDinner(() => { goToPlayground(); });
 
-});
+// });
+
+
+const p= new Promise((res, rej)=>{
+    console. log ("Going to do the homework!!")
+
+    setTimeout(()=>{
+      const done=true;
+      if(done) {
+          res ("Success")
+      }else{
+        rej ("Failed to fetch Data from the server")
+      }
+    },3000)
+})
+
+
+ p.then((a)=>{
+    console.log(a)
+}).catch((err)=>{
+    console.log(err)
+})
