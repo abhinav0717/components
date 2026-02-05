@@ -247,46 +247,47 @@
 // })
 // console.log("last line")
 
-function orderfood(){
-    return new Promise((res,rej)=>{
-       setTimeout(() => {
-        console.log("food delivered")
-        res()
-       }, 2000);
-    })
-}
+// function orderfood(){
+//     return new Promise((res,rej)=>{
+//        setTimeout(() => {
+//         console.log("food delivered")
+//         res()
+//        }, 2000);
+//     })
+// }
 
-  function preparedfood(){
-      return new promises((res,rej)=>{
-        setTimeout(() => {
-         console.log("food prepared")
-         res()
-       }, 2000);
-    })
-}
+//   function preparedfood(){
+//       return new promises((res,rej)=>{
+//         setTimeout(() => {
+//          console.log("food prepared")
+//          res()
+//        }, 2000);
+//     })
+// }
 
-orderfood()
-.then(()=>{
-    console.log("eatind food")
-})
-
-
-
-function deliverFood(){
-    return new Promise ((res, rej)=> {
-       setTimeout(() =>{
-          console. log ("Food delivered")
-           res ()
-       },2000)
-    })
-}
+// orderfood()
+// .then(()=>{
+//     console.log("eatind food")
+// })
 
 
 
-async function foodorder(){
-    await orderFood ()
-    await prepareFood() 
-    await deliverFood()
-    console.log("Enjoy your food")
-}
-foodorder()
+// function deliverFood(){
+//     return new Promise ((res, rej)=> {
+//        setTimeout(() =>{
+//           console. log ("Food delivered")
+//            res ()
+//        },2000)
+//     })
+// }
+
+
+
+// async function foodorder(){
+//     await orderFood ()
+//     await prepareFood() 
+//     await deliverFood()
+//     console.log("Enjoy your food")
+// }
+// foodorder()
+
