@@ -169,22 +169,69 @@
 // });
 
 
-const p= new Promise((res, rej)=>{
-    console. log ("Going to do the homework!!")
+// const p= new Promise((res, rej)=>{
+//     console. log ("Going to do the homework!!")
 
-    setTimeout(()=>{
-      const done=true;
-      if(done) {
-          res ("Success")
-      }else{
-        rej ("Failed to fetch Data from the server")
-      }
-    },3000)
+//     setTimeout(()=>{
+//       const done=true;
+//       if(done) {
+//           res ("Success")
+//       }else{
+//         rej ("Failed to fetch Data from the server")
+//       }
+//     },3000)
+// })
+
+
+//  p.then((a)=>{
+//     console.log(a)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{          
+//     console.log("finally blocked")
+// })
+
+// promises changing
+
+function dohomework(){
+    const p=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            let done=true;
+            if(done){
+                console.log("homework complete")
+                res("homework not done")
+            }
+            else{
+                rej("homework not done")
+            }
+           
+        },2000)
+    })
+    return p;
+}
+function eatDinner(){
+    const p=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            let done=true;
+            if(done){
+                console.log("dinner complete")
+                res("dinner not done")
+            }
+            else{
+                rej("dinner not done")
+            }
+            
+        },2000)
+    })
+    return p;
+}
+
+dohomework().then((data)=>{
+    console.log(data)
+}).then((data)=>{
+    console.log(data)
+    return gotoplaygroung()
+}),then((data)=>{
+    console.log(data)
 })
 
-
- p.then((a)=>{
-    console.log(a)
-}).catch((err)=>{
-    console.log(err)
-})
