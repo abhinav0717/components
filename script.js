@@ -283,11 +283,54 @@
 
 
 
-// async function foodorder(){
-//     await orderFood ()
-//     await prepareFood() 
-//     await deliverFood()
-//     console.log("Enjoy your food")
+// async function getdata(){
+//     try{
+//         const response=await fetch("https://jsonplaceholder.typicode.com/posts",{
+//             method:"POST",
+//             headers:{
+//                 "Content-Type":"application/json"
+//             },
+//             body:JSON.stringify({
+//                 title:"my post",
+//                 body:"this is my post",
+//                 userId:1
+//             })
+//         })
+//         const data=await response.json()
+//         console.log(data)
+//     }catch(error){
+//         console.log("error",error)
+//     }   
 // }
-// foodorder()
+// getdata()
+
+// let obj={
+//     name:"Abhinav"
+//     age:19
+// }
+
+// localStorage.setItem("obj", JSON.stringity(obj))
+
+// localStorage.setItem("name", "Abhinav")
+// localStorage.setItem("age", 19)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))
+
+// console.log(JSON.parse(localStorage.getItem("obj")))
+
+// localStorage.removeItem("age")
+
+// sessionStorage.setItem("name", "Abhinav");
+// sessionStorage.setItem("age", 19);
+// console.log(sessionStorage.getItem("name"));
+// console.log(sessionStorage.getItem("age"));
+
+document.cookie="name=Abhinav; expires=Fri, 20 feb 2026 23:59:59 UTC; 
+document.cookie="age=19; expires=Fri, 20 feb 2026 23:59:59 UTC;
+
+async function sample(){
+    await fetch("http://127.0.0.1:3000/index.html")
+}
+sample()
 
